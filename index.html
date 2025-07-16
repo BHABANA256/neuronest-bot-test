@@ -2,35 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Neuronest AI Bot</title>
+  <title>Neuronest Bot</title>
 
-  <!-- Botpress Chat Engine -->
+  <!-- Load Botpress script -->
   <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
 
-  <!-- Init Widget (Manual Control) -->
+  <!-- Initialize the chat but hide it -->
   <script>
     window.botpressWebChat.init({
-      host: "https://cdn.botpress.cloud/webchat/v3",
-      botId: "YOUR-BOT-ID-HERE", // ← Replace with real bot ID
-      botName: "Neuronest AI",
+      botId: "YOUR-BOT-ID-HERE",
+      hostUrl: "https://cdn.botpress.cloud/webchat/v3",
+      messagingUrl: "https://messaging.botpress.cloud",
       hideWidget: true,
-      showPoweredBy: false
+      showCloseButton: true,
+      enableConversationDeletion: true,
+      botName: "Neuronest AI Bot"
     });
   </script>
 
-  <!-- Button Styling -->
   <style>
     #openChat {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      padding: 12px 24px;
-      background-color: #0055FF;
+      padding: 12px 18px;
+      background-color: #0055ff;
       color: #fff;
+      border-radius: 8px;
       border: none;
-      border-radius: 10px;
       cursor: pointer;
-      font-weight: bold;
       z-index: 9999;
     }
   </style>
@@ -38,9 +38,9 @@
 <body>
 
   <!-- Floating Button -->
-  <button id="openChat">💬 Talk to Neuronest AI</button>
+  <button id="openChat">💬 Chat with Neuronest AI</button>
 
-  <!-- Show Chat on Click -->
+  <!-- Trigger Chat -->
   <script>
     const waitForBotpress = setInterval(() => {
       if (window.botpressWebChat) {
@@ -54,3 +54,6 @@
 
 </body>
 </html>
+
+
+  
