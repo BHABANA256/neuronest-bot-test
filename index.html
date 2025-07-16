@@ -4,41 +4,52 @@
   <meta charset="UTF-8">
   <title>Neuronest AI Bot</title>
 
-  <!-- 🔥 Botpress Chat Widget Scripts -->
+  <!-- Botpress Chat Engine -->
   <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/07/15/15/20250715155242-9XK7618R.js"></script>
 
+  <!-- Init Widget (Manual Control) -->
+  <script>
+    window.botpressWebChat.init({
+      host: "https://cdn.botpress.cloud/webchat/v3",
+      botId: "YOUR-BOT-ID-HERE", // ← Replace with real bot ID
+      botName: "Neuronest AI",
+      hideWidget: true,
+      showPoweredBy: false
+    });
+  </script>
+
+  <!-- Button Styling -->
   <style>
     #openChat {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      padding: 14px 22px;
-      background-color: #1E40AF;
-      color: #ffffff;
+      padding: 12px 24px;
+      background-color: #0055FF;
+      color: #fff;
       border: none;
-      border-radius: 50px;
-      font-size: 16px;
+      border-radius: 10px;
       cursor: pointer;
+      font-weight: bold;
       z-index: 9999;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    #openChat:hover {
-      background-color: #3B82F6;
     }
   </style>
 </head>
 <body>
 
-  <!-- 💬 Floating Chat Button -->
-  <button id="openChat">💬 Chat with Neuronest AI</button>
+  <!-- Floating Button -->
+  <button id="openChat">💬 Talk to Neuronest AI</button>
 
+  <!-- Show Chat on Click -->
   <script>
-    // Open the bot when the button is clicked
-    document.getElementById('openChat').addEventListener('click', function () {
-      window.botpressWebChat.sendEvent({ type: 'show' });
-    });
+    const waitForBotpress = setInterval(() => {
+      if (window.botpressWebChat) {
+        clearInterval(waitForBotpress);
+        document.getElementById("openChat").addEventListener("click", function () {
+          window.botpressWebChat.sendEvent({ type: 'show' });
+        });
+      }
+    }, 500);
   </script>
 
 </body>
