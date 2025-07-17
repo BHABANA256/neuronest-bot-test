@@ -8,13 +8,14 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background: #f2f2f2;
       color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
+
     .launch-button {
       background: #4CAF50;
       color: white;
@@ -25,6 +26,7 @@
       cursor: pointer;
       transition: background 0.3s;
     }
+
     .launch-button:hover {
       background: #45a049;
     }
@@ -32,30 +34,9 @@
 </head>
 <body>
 
-  <button class="launch-button" onclick="window.botpressWebChat.sendEvent({ type: 'show' })">
-    💬 Launch Chat
+  <button class="launch-button" onclick="window.location.href='https://cdn.botpress.cloud/webchat/v3/index.html?botId=01K079XJYCS9NYVP3G1WPKM0GM'">
+    💬 Launch Neuronest Agent
   </button>
-
-  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-  <script>
-    window.botpressWebChat.init({
-      botId: "01K079XJYCS9NYVP3G1WPKM0GM",
-      clientId: "01K079XJYCS9NYVP3G1WPKM0GM",
-      hostUrl: "https://cdn.botpress.cloud/webchat/v3",
-      messagingUrl: "https://messaging.botpress.cloud",
-      botName: "Neuronest Agent 💼",
-      showPoweredBy: false,
-      enableReset: true,
-      hideWidget: true
-    });
-  </script>
 
 </body>
 </html>
-
-     
-
-    
-    
- 
-
