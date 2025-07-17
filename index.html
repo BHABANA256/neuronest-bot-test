@@ -1,59 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Neuronest Bot</title>
-
-  <!-- Load Botpress script -->
-  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-
-  <!-- Initialize the chat but hide it -->
-  <script>
-    window.botpressWebChat.init({
-      botId: "YOUR-BOT-ID-HERE",
-      hostUrl: "https://cdn.botpress.cloud/webchat/v3",
-      messagingUrl: "https://messaging.botpress.cloud",
-      hideWidget: true,
-      showCloseButton: true,
-      enableConversationDeletion: true,
-      botName: "Neuronest AI Bot"
-    });
-  </script>
-
+  <title>Neuronest AI</title>
   <style>
-    #openChat {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 12px 18px;
-      background-color: #0055ff;
+    body {
+      background-color: #fefefe;
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 150px;
+    }
+    .chat-button {
+      padding: 18px 36px;
+      font-size: 20px;
+      background-color: #0078ff;
       color: #fff;
-      border-radius: 8px;
       border: none;
+      border-radius: 10px;
       cursor: pointer;
-      z-index: 9999;
+      transition: 0.3s ease;
+    }
+    .chat-button:hover {
+      background-color: #004aad;
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating Button -->
-  <button id="openChat">💬 Chat with Neuronest AI</button>
+  <h1>💼 Welcome to Neuronest AI</h1>
+  <p>Tap below to launch your personal finance assistant</p>
 
-  <!-- Trigger Chat -->
-  <script>
-    const waitForBotpress = setInterval(() => {
-      if (window.botpressWebChat) {
-        clearInterval(waitForBotpress);
-        document.getElementById("openChat").addEventListener("click", function () {
-          window.botpressWebChat.sendEvent({ type: 'show' });
-        });
-      }
-    }, 500);
-  </script>
+  <button 
+    class="chat-button"
+    onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/15/15/20250715155242-2GB61L2M.json', '_blank')">
+    🚀 Launch AI Bot
+  </button>
 
 </body>
 </html>
 
-
-  
+    
