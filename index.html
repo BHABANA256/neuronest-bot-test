@@ -2,73 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Neuronest AI – Loan & Insurance Assistant</title>
+  <title>Neuronest AI – Chat Assistant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #1e1e2f;
-      color: white;
-      padding: 20px;
-    }
-    h1 {
-      margin: 0;
-    }
-    main {
-      padding: 50px 20px;
-    }
-    .cta-button {
-      padding: 15px 30px;
-      font-size: 18px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: background 0.3s;
-    }
-    .cta-button:hover {
-      background-color: #0056b3;
-    }
-    footer {
-      background-color: #1e1e2f;
-      color: white;
-      padding: 10px;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-  </style>
 </head>
-<body>
+<body style="margin:0;padding:0;font-family:sans-serif;text-align:center;background:#f2f2f2;">
+  <h1 style="margin-top:50px;">Welcome to Neuronest AI</h1>
+  <p>Click the chat icon in the bottom-right corner to talk to our bot 🤖</p>
 
-<header>
-  <h1>Neuronest AI</h1>
-  <p>Your Smart Loan & Insurance Assistant</p>
-</header>
-
-<main>
-  <h2>Welcome to the future of financial services 💰🤖</h2>
-  <p>Click the chat icon at the bottom-right to get started with your personal AI assistant.</p>
-  <button class="cta-button" onclick="window.botpressWebChat.open()">Chat Now</button>
-</main>
-
-<footer>
-  &copy; 2025 Neuronest AI. All rights reserved.
-</footer>
-
-<!-- 🤖 Botpress Chatbot Embed Script -->
-<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-<script>
-  window.botpressWebChat.init({
-      "composerPlaceholder": "Chat with us 🤖",
+  <!-- Botpress Chat Bubble Script -->
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with Neuronest AI 🤖",
       "botId": "01K079XJYCS9NYVP3G1WPKM0GM",
       "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
       "messagingUrl": "https://messaging.botpress.cloud",
@@ -76,15 +21,13 @@
       "webhookId": "web",
       "lazySocket": true,
       "themeName": "prism",
-      "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/28c37a86-489e-45da-a253-4a9ae84a7df2/v43186/style.css",
       "showPoweredBy": false,
-      "theme": "prism",
       "enableConversationDeletion": true,
-      "closeOnEscape": true,
-      "showConversationsButton": true,
-      "enableTranscriptDownload": true
-  });
-</script>
-
+      "showConversationsButton": true
+    });
+  </script>
 </body>
 </html>
+
+   
+    
