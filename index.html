@@ -3,40 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neuronest Agent</title>
+  <title>Loan & Insurance Bot</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background: #f6f9fc;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 60px;
     }
-
-    .launch-button {
-      background: #4CAF50;
+    h1 {
+      color: #2a2e35;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 40px;
+    }
+    .launch-btn {
+      background: linear-gradient(to right, #4e8cff, #4ec3ff);
       color: white;
-      border: none;
-      padding: 1em 2em;
       font-size: 1.2em;
-      border-radius: 8px;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 12px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
-
-    .launch-button:hover {
-      background: #45a049;
+    .launch-btn:hover {
+      background: linear-gradient(to right, #3a6ee8, #3ab0e8);
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
-  <button class="launch-button" onclick="window.location.href='https://cdn.botpress.cloud/webchat/v3/index.html?botId=01K079XJYCS9NYVP3G1WPKM0GM'">
-    💬 Launch Neuronest Agent
-  </button>
+  <h1>Get Instant Help with Loans & Insurance</h1>
+  <p>Click below to chat with our AI Agent for free loan advice, insurance options, and quick eligibility checks.</p>
+  <button class="launch-btn" onclick="launchChat()">🚀 Launch Chat</button>
+
+  <script>
+    function launchChat() {
+      const botUrl = "https://cdn.botpress.cloud/webchat/v3.1/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/15/15/20250715155242-2GB61L2M.json";
+      window.open(botUrl, "_blank");
+    }
+  </script>
 
 </body>
 </html>
