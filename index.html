@@ -1,24 +1,77 @@
-<script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loan & Insurance Advisor Bot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f9ff;
+      color: #2c3e50;
+      text-align: center;
+    }
 
-<script>
-  window.botpressWebChat.init({
-    botId: "01K079XJYCS9NYVP3G1WPKM0GM",
-    hostUrl: "https://cdn.botpress.cloud/webchat/v3.0",
-    messagingUrl: "https://messaging.botpress.cloud",
-    clientId: "01K079XJYCS9NYVP3G1WPKM0GM",
-    webhookId: "01K079XJYCS9NYVP3G1WPKM0GM",
-    lazyLoad: false,
-    themeName: "light",
-    theme: "light",
-    botName: "Loan & Insurance Assistant",
-    stylesheet: "https://cdn.botpress.cloud/webchat/v3/themes/light.css",
-    enableReset: true,
-    showPoweredBy: false,
-    containerWidth: "400px",
-    layoutWidth: "100%",
-    avatarUrl: "https://cdn-icons-png.flaticon.com/512/3262/3262266.png",
-    enableTranscriptDownload: false
-  });
-</script>
+    header {
+      background: #2979ff;
+      padding: 2rem 1rem;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
 
-    
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    main {
+      padding: 3rem 1rem;
+    }
+
+    .cta-button {
+      background-color: #2979ff;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(41, 121, 255, 0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #1c54b2;
+    }
+
+    .chat-container {
+      height: 500px;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Loan & Insurance Assistant 💬</h1>
+    <p>Ask anything about loans or insurance. We're available 24/7 to help you.</p>
+  </header>
+
+  <main>
+    <button class="cta-button" onclick="document.getElementById('bp-widget').style.display='block'">Start Chat Now</button>
+    <div class="chat-container" id="bp-widget" style="display:none;">
+      <iframe
+        src="https://cdn.botpress.cloud/webchat/v1?botId=01K079XJYCS9NYVP3G1WPKM0GM&host=https://cdn.botpress.cloud/webchat/v1"
+        style="width: 100%; height: 100%; border: none;"
+        allow="microphone; camera"
+      ></iframe>
+    </div>
+  </main>
+</body>
+</html>
+
