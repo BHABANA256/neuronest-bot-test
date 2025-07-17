@@ -1,48 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neuronest Bot Demo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+<button onclick="openBot()" style="padding: 12px 20px; background-color: #4CAF50; color: white; font-size: 16px; border: none; border-radius: 8px; cursor: pointer;">
+  💬 Chat With Us
+</button>
+
+<script>
+  function openBot() {
+    const botUrl = "https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://cdn.botpress.cloud/3d18cb75-57f5-41d5-9777-52c0a4ec8979/webchat/config.json";
+    const newWindow = window.open(botUrl, "_blank", "width=420,height=700");
+    if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+      alert("Popup blocked! Please allow popups for this site.");
     }
-    .btn {
-      padding: 16px 32px;
-      font-size: 18px;
-      background-color: #00bcd4;
-      color: #fff;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background-color: #0097a7;
-    }
-  </style>
-</head>
-<body>
+  }
+</script>
 
-  <button class="btn" onclick="openBot()">💬 Launch Neuronest Bot</button>
-
-  <script>
-    function openBot() {
-      // Masked inside JS, not directly exposed
-      const encoded = "aHR0cHM6Ly9jZG4uYm90cHJlc3MuY2xvdWQvd2ViY2hhdC92My4wL3NoYXJlYWJsZS5odG1sP2NvbmZpZ1VybD1odHRwczovL2ZpbGVzLmJwY29udGVudC5jbG91ZC8yMDI1LzA3LzE1LzE1LzIwMjUwNzE1MTU1MjQyLTJHQjYxTDJNLmpzb24=";
-      const botUrl = atob(encoded);
-      window.open(botUrl, '_blank');
-    }
-  </script>
-
-</body>
-</html>
-
-
+      
