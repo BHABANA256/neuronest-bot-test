@@ -1,33 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Neuronest AI – Chat Assistant</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body style="margin:0;padding:0;font-family:sans-serif;text-align:center;background:#f2f2f2;">
-  <h1 style="margin-top:50px;">Welcome to Neuronest AI</h1>
-  <p>Click the chat icon in the bottom-right corner to talk to our bot 🤖</p>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loan & Insurance Bot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f8fc;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-  <!-- Botpress Chat Bubble Script -->
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 1rem 2rem;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .button-container {
+      margin-top: 2rem;
+    }
+
+    .launch-btn {
+      background-color: #004aad;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .launch-btn:hover {
+      background-color: #003080;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      background-color: #eee;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>💼 Loan & Insurance Chat Assistant</h1>
+  </header>
+
+  <main>
+    <p>Need a loan? Looking for insurance? Talk to our smart assistant now!</p>
+    <div class="button-container">
+      <button class="launch-btn" onclick="window.botpressWebChat.sendEvent({ type: 'show' })">
+        💬 Launch Chat
+      </button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Loan & Insurance Bot. All rights reserved.
+  </footer>
+
+  <!-- Botpress Chat Widget -->
   <script>
-    window.botpressWebChat.init({
-      "composerPlaceholder": "Chat with Neuronest AI 🤖",
-      "botId": "01K079XJYCS9NYVP3G1WPKM0GM",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "01K079XJYCS9NYVP3G1WPKM0GM",
-      "webhookId": "web",
-      "lazySocket": true,
-      "themeName": "prism",
-      "showPoweredBy": false,
-      "enableConversationDeletion": true,
-      "showConversationsButton": true
-    });
+    window.botpressWebChat = {
+      botId: "01K079XJYCS9NYVP3G1WPKM0GM",
+      hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+      messagingUrl: "https://messaging.botpress.cloud",
+      clientId: "01K079XJYCS9NYVP3G1WPKM0GM",
+      botName: "Loan & Insurance Assistant",
+      stylesheet: "https://cdn.botpress.cloud/webchat/v1/themes/light.css",
+      showPoweredBy: false,
+      themeName: "light",
+      layoutWidth: "400px",
+      enableReset: true,
+      enableTranscriptDownload: false
+    };
   </script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+
 </body>
 </html>
 
-   
     
