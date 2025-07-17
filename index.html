@@ -3,52 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loan & Insurance Bot</title>
+  <title>Neuronest AI Agent</title>
   <style>
     body {
-      background: #f6f9fc;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #f2f5f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
       text-align: center;
-      padding: 60px;
     }
     h1 {
-      color: #2a2e35;
-      font-size: 2.5em;
-      margin-bottom: 20px;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
     p {
-      font-size: 1.1em;
-      color: #555;
-      margin-bottom: 40px;
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin-bottom: 2rem;
     }
-    .launch-btn {
-      background: linear-gradient(to right, #4e8cff, #4ec3ff);
+    button {
+      background: linear-gradient(to right, #4f46e5, #3b82f6);
       color: white;
-      font-size: 1.2em;
       border: none;
       padding: 15px 30px;
-      border-radius: 12px;
+      font-size: 1.2rem;
+      border-radius: 10px;
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
     }
-    .launch-btn:hover {
-      background: linear-gradient(to right, #3a6ee8, #3ab0e8);
-      transform: scale(1.05);
+    button:hover {
+      background: linear-gradient(to right, #4338ca, #2563eb);
     }
   </style>
 </head>
 <body>
 
-  <h1>Get Instant Help with Loans & Insurance</h1>
+  <h1>Get Instant Help with <br> Loans & Insurance</h1>
   <p>Click below to chat with our AI Agent for free loan advice, insurance options, and quick eligibility checks.</p>
-  <button class="launch-btn" onclick="launchChat()">🚀 Launch Chat</button>
+  <button onclick="window.botpressWebChat.sendEvent({ type: 'show' })">
+    🚀 Launch Chat
+  </button>
 
+  <!-- Botpress Inject Script -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
   <script>
-    function launchChat() {
-      const botUrl = "https://cdn.botpress.cloud/webchat/v3.1/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/15/15/20250715155242-2GB61L2M.json";
-      window.open(botUrl, "_blank");
-    }
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Ask me anything...",
+      "botId": "5e4a8721-bfcb-4768-ae36-25a7c98e2cf7", // ← Replace with YOUR bot ID
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v3",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "5e4a8721-bfcb-4768-ae36-25a7c98e2cf7", // ← Same as botId
+      "lazyLoad": true,
+      "showPoweredBy": false,
+      "enableConversationDeletion": true,
+      "theme": "prism",
+      "themeColor": "#4f46e5"
+    });
   </script>
 
 </body>
